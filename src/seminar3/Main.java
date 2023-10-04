@@ -22,5 +22,13 @@
 
 package seminar3;
 
+import seminar3.controller.Controller;
+import seminar3.exceptions.PersonDataException;
+
 public class Main {
+    public static void main(String[] args) throws PersonDataException {
+        Controller controller = new Controller();
+
+        controller.collectUserData();
+    }
 }

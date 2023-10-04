@@ -1,14 +1,15 @@
 package seminar3.view;
 
+import seminar3.exceptions.PersonDataException;
 import java.util.Scanner;
 
 public class MainMenu {
-    Scanner in = new Scanner(System.in);
+    public void displayMessage(String message) throws PersonDataException {
+        System.out.println(message);
+    }
 
-    public String mainMenu() {
-
-        System.out.println("Введите данные пользователя в формате " +
-                "<Фамилия Имя Отчество ДатаРождения НомерТелефона Пол>");
-        return in.next();
+    public String getInput() {
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine();
     }
 }
